@@ -50,7 +50,11 @@ test("leaves missing links disabled and keeps available resources valid", async 
   assert.match(links, /srsDocument: "\/documentos\/srs\.docx"/);
   assert.match(
     links,
+    /portfolio: "https:\/\/portafolio-seven-phi-38\.vercel\.app\/"/,
+  );
+  assert.match(
+    links,
     /finalSpa: "https:\/\/el-palacio-2da-version\.vercel\.app\/"/,
   );
-  assert.equal((links.match(/: "",/g) ?? []).length, 4);
+  assert.equal((links.match(/: "",/g) ?? []).length, 3);
 });

@@ -1,5 +1,4 @@
 import {
-  ArrowDown,
   ArrowUpRight,
   BriefcaseBusiness,
   Check,
@@ -85,9 +84,9 @@ function ResourceCard({ resource }: { resource: Resource }) {
   const available = Boolean(resource.href);
 
   return (
-    <article className="resource-card group flex min-h-[320px] flex-col rounded-[1.75rem] border border-slate/20 bg-white p-6 sm:p-7">
+    <article className="resource-card group flex min-h-[310px] flex-col rounded-[1.75rem] border border-steel/35 bg-white/90 p-6 sm:p-7">
       <div className="flex items-start justify-between gap-4">
-        <span className="font-mono text-xs font-semibold tracking-[0.18em] text-slate">
+        <span className="font-detail text-xs font-semibold tracking-[0.16em] text-slate">
           {resource.number}
         </span>
         <div className="icon-shell grid size-12 place-items-center rounded-2xl bg-mist text-navy">
@@ -97,7 +96,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
 
       <div className="mt-9 flex-1">
         <div
-          className={`mb-4 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.13em] ${
+          className={`mb-4 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 font-detail text-[0.68rem] font-semibold uppercase tracking-[0.12em] ${
             available
               ? "bg-mist text-navy"
               : "bg-[#F1F3F5] text-[#687482]"
@@ -106,7 +105,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
           {available && <Check aria-hidden="true" className="size-3" strokeWidth={2.4} />}
           {available ? "Disponible" : "Pendiente de integrar"}
         </div>
-        <h2 className="max-w-[18ch] text-[1.35rem] font-semibold leading-tight tracking-[-0.025em] text-navy">
+        <h2 className="max-w-[18ch] font-display text-[1.35rem] font-semibold leading-tight tracking-[-0.025em] text-navy">
           {resource.title}
         </h2>
         <p className="mt-3 text-sm leading-6 text-ink/70">{resource.description}</p>
@@ -115,7 +114,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
       {available ? (
         <a
           aria-label={`${resource.action} (abre en una pestaña nueva)`}
-          className="resource-link mt-7 inline-flex min-h-11 items-center justify-between gap-3 border-t border-slate/15 pt-5 text-sm font-semibold text-navy outline-none"
+          className="resource-link mt-7 inline-flex min-h-11 items-center justify-between gap-3 border-t border-slate/15 pt-5 font-detail text-sm font-semibold text-navy outline-none"
           download={resource.fileName}
           href={resource.href}
           rel="noreferrer"
@@ -130,7 +129,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
       ) : (
         <div
           aria-disabled="true"
-          className="mt-7 inline-flex min-h-11 cursor-not-allowed items-center justify-between gap-3 border-t border-slate/15 pt-5 text-sm font-semibold text-ink/35"
+          className="mt-7 inline-flex min-h-11 cursor-not-allowed items-center justify-between gap-3 border-t border-slate/15 pt-5 font-detail text-sm font-semibold text-ink/35"
         >
           <span>Enlace por integrar</span>
           <span aria-hidden="true">—</span>
@@ -143,42 +142,19 @@ function ResourceCard({ resource }: { resource: Resource }) {
 export default function Home() {
   return (
     <main>
-      <section className="hero-shell overflow-hidden bg-navy text-white">
-        <nav
-          aria-label="Navegación principal"
-          className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12"
-        >
-          <a
-            aria-label="Ir al inicio"
-            className="inline-flex items-center gap-3 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-mist"
-            href="#inicio"
-          >
-            <span className="grid size-10 place-items-center rounded-xl border border-white/20 bg-white/10 font-mono text-sm font-semibold tracking-tight">
-              EP
-            </span>
-            <span className="text-sm font-semibold tracking-wide">El Palacio</span>
-          </a>
-          <a
-            className="hidden items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-semibold tracking-wide text-white/85 transition hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mist sm:inline-flex"
-            href="#recursos"
-          >
-            Ver entrega
-            <ArrowDown aria-hidden="true" className="size-3.5" />
-          </a>
-        </nav>
-
+      <section className="hero-shell bg-navy px-5 text-white sm:px-8 lg:px-12">
         <div
-          className="hero-content mx-auto grid min-h-[650px] max-w-7xl items-end gap-12 px-5 pb-14 pt-16 sm:px-8 sm:pb-20 lg:grid-cols-[1.35fr_0.65fr] lg:px-12 lg:pb-24 lg:pt-24"
+          className="hero-content mx-auto grid min-h-[590px] max-w-7xl items-center gap-12 pb-32 pt-20 sm:pt-24 lg:grid-cols-[1.35fr_0.65fr] lg:pb-36"
           id="inicio"
         >
           <div>
-            <p className="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-steel">
+            <p className="mb-6 flex items-center gap-3 font-detail text-xs font-semibold uppercase tracking-[0.18em] text-steel">
               <span className="h-px w-9 bg-steel/70" />
               Presentación académica · SPA
             </p>
-            <h1 className="max-w-4xl text-balance text-[clamp(3.35rem,8vw,7rem)] font-semibold leading-[0.91] tracking-[-0.065em]">
+            <h1 className="max-w-4xl text-balance font-display text-[clamp(3.25rem,7.6vw,6.75rem)] font-semibold leading-[0.93] tracking-[-0.055em]">
               Una entrega.
-              <span className="mt-1 block font-serif font-normal italic text-mist">
+              <span className="mt-2 block font-display font-light text-mist">
                 Todo el proyecto.
               </span>
             </h1>
@@ -189,8 +165,8 @@ export default function Home() {
             </p>
           </div>
 
-          <aside className="mb-1 border-l border-white/20 pl-6 lg:justify-self-end lg:pl-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-steel">
+          <aside className="rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-6 lg:justify-self-end lg:p-7">
+            <p className="font-detail text-xs font-semibold uppercase tracking-[0.18em] text-steel">
               Proyecto final
             </p>
             <p className="mt-3 max-w-xs text-sm leading-6 text-white/65">
@@ -209,16 +185,16 @@ export default function Home() {
       </section>
 
       <section
-        className="bg-canvas px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28"
+        className="resource-section relative -mt-16 rounded-t-[2.75rem] bg-canvas px-5 pb-20 pt-16 sm:rounded-t-[4rem] sm:px-8 sm:pb-24 sm:pt-20 lg:px-12 lg:pb-28"
         id="recursos"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 grid gap-5 border-b border-slate/20 pb-9 md:grid-cols-[1fr_auto] md:items-end">
+          <div className="mb-12 grid gap-5 md:grid-cols-[1fr_auto] md:items-end">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate">
+              <p className="font-detail text-xs font-semibold uppercase tracking-[0.18em] text-slate">
                 Entregables del proyecto
               </p>
-              <h2 className="mt-3 text-4xl font-semibold tracking-[-0.045em] text-navy sm:text-5xl">
+              <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-0.04em] text-navy sm:text-5xl">
                 Evidencias y accesos
               </h2>
             </div>
@@ -236,13 +212,13 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-slate/15 bg-white px-5 py-8 sm:px-8 lg:px-12">
+      <footer className="border-t border-steel/25 bg-canvas px-5 py-8 sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-ink/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
             <span className="font-semibold text-navy">El Palacio</span> · Presentación de proyecto SPA
           </p>
           <a
-            className="inline-flex items-center gap-2 font-semibold text-slate outline-none hover:text-navy focus-visible:ring-2 focus-visible:ring-slate"
+            className="inline-flex items-center gap-2 font-detail font-semibold text-slate outline-none hover:text-navy focus-visible:ring-2 focus-visible:ring-slate"
             href="#inicio"
           >
             Volver al inicio

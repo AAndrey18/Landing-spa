@@ -4,7 +4,7 @@
  */
 export const projectLinks = {
   promotionalVideo: "",
-  portfolio: "",
+  portfolio: "https://portafolio-seven-phi-38.vercel.app/",
   tutorialVideo: "",
 
   // Cuando tengas el PDF, guárdalo en public/documentos/srs.pdf y cambia

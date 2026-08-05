@@ -7,10 +7,11 @@
   --slate: #526d82;
   --steel: #9db2bf;
   --mist: #dde6ed;
-  --canvas: #f5f7f8;
+  --canvas: #eef3f6;
   --ink: #202b38;
-  --font-app-sans: "Segoe UI", Arial, Helvetica, sans-serif;
-  --font-app-mono: Consolas, "Courier New", monospace;
+  --font-app-body: system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-app-display: Arial, Helvetica, sans-serif;
+  --font-app-detail: "Trebuchet MS", "Segoe UI", sans-serif;
 }
 
 @theme inline {
@@ -22,8 +23,9 @@
   --color-mist: var(--mist);
   --color-canvas: var(--canvas);
   --color-ink: var(--ink);
-  --font-sans: var(--font-app-sans);
-  --font-mono: var(--font-app-mono);
+  --font-sans: var(--font-app-body);
+  --font-display: var(--font-app-display);
+  --font-detail: var(--font-app-detail);
 }
 
 * {
@@ -38,7 +40,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-app-sans);
+  font-family: var(--font-app-body);
 }
 
 ::selection {
@@ -48,41 +50,15 @@ body {
 
 .hero-shell {
   position: relative;
-  isolation: isolate;
+  background: var(--navy);
 }
 
-.hero-shell::before,
-.hero-shell::after {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  pointer-events: none;
-}
-
-.hero-shell::before {
-  top: 5rem;
-  right: -7rem;
-  width: 27rem;
-  height: 27rem;
-  border: 1px solid rgb(221 230 237 / 14%);
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 5rem rgb(221 230 237 / 3%),
-    0 0 0 10rem rgb(221 230 237 / 2%);
-}
-
-.hero-shell::after {
-  inset: 0;
-  opacity: 0.16;
-  background-image:
-    linear-gradient(rgb(255 255 255 / 7%) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(255 255 255 / 7%) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 28%, transparent 100%);
+.resource-section {
+  box-shadow: 0 -20px 50px rgb(21 33 48 / 12%);
 }
 
 .resource-card {
-  box-shadow: 0 12px 40px rgb(39 55 77 / 5%);
+  box-shadow: 0 12px 34px rgb(39 55 77 / 5%);
   transition:
     transform 220ms ease,
     border-color 220ms ease,
