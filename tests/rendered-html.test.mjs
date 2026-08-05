@@ -14,7 +14,7 @@ test("defines the landing metadata and working local commands", async () => {
   ]);
   const packageJson = JSON.parse(packageText);
 
-  assert.match(layout, /El Palacio \| Presentación del proyecto SPA/);
+  assert.match(layout, /Landing El Palacio/);
   assert.match(layout, /lang="es"/);
   assert.equal(packageJson.scripts.dev, "next dev");
   assert.equal(packageJson.scripts.build, "next build");
@@ -37,6 +37,13 @@ test("keeps the six resources in the requested order", async () => {
     assert.ok(position > lastPosition, `${label} debe conservar su posición`);
     lastPosition = position;
   }
+
+  assert.match(page, />\s*Landing\s*</);
+  assert.match(page, />\s*El Palacio\s*</);
+  assert.match(page, />Supabase</);
+  assert.match(page, /bg-slate/);
+  assert.match(page, /h-12 w-16/);
+  assert.match(page, /Los recursos que aún no tienen enlace están marcados/);
 });
 
 test("leaves missing links disabled and keeps available resources valid", async () => {
@@ -47,7 +54,10 @@ test("leaves missing links disabled and keeps available resources valid", async 
 
   assert.match(page, /const available = Boolean\(resource\.href\)/);
   assert.match(page, /aria-disabled="true"/);
-  assert.match(links, /srsDocument: "\/documentos\/srs\.docx"/);
+  assert.match(
+    links,
+    /srsDocument: "\/documentos\/ERS-actualizacion-semana-5\.pdf"/,
+  );
   assert.match(
     links,
     /portfolio: "https:\/\/portafolio-seven-phi-38\.vercel\.app\/"/,

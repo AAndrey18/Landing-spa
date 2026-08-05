@@ -7,9 +7,7 @@ export const projectLinks = {
   portfolio: "https://portafolio-seven-phi-38.vercel.app/",
   tutorialVideo: "",
 
-  // Cuando tengas el PDF, guárdalo en public/documentos/srs.pdf y cambia
-  // esta ruta por "/documentos/srs.pdf".
-  srsDocument: "/documentos/srs.docx",
+  srsDocument: "/documentos/ERS-actualizacion-semana-5.pdf",
 
   testimonialVideo: "",
   finalSpa: "https://el-palacio-2da-version.vercel.app/",

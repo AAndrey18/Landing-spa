@@ -57,7 +57,7 @@ const resources: Resource[] = [
     action: "Descargar documento SRS",
     href: projectLinks.srsDocument,
     icon: FileText,
-    fileName: "SRS-El-Palacio.docx",
+    fileName: "ERS-actualizacion-semana-5.pdf",
   },
   {
     number: "05",
@@ -89,8 +89,8 @@ function ResourceCard({ resource }: { resource: Resource }) {
         <span className="font-detail text-xs font-semibold tracking-[0.16em] text-slate">
           {resource.number}
         </span>
-        <div className="icon-shell grid size-12 place-items-center rounded-2xl bg-mist text-navy">
-          <Icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
+        <div className="icon-shell grid h-12 w-16 place-items-center rounded-2xl bg-mist text-navy">
+          <Icon aria-hidden="true" className="h-5 w-7" strokeWidth={1.8} />
         </div>
       </div>
 
@@ -153,9 +153,9 @@ export default function Home() {
               Presentación académica · SPA
             </p>
             <h1 className="max-w-4xl text-balance font-display text-[clamp(3.25rem,7.6vw,6.75rem)] font-semibold leading-[0.93] tracking-[-0.055em]">
-              Una entrega.
+              Landing
               <span className="mt-2 block font-display font-light text-mist">
-                Todo el proyecto.
+                El Palacio
               </span>
             </h1>
             <p className="mt-8 max-w-2xl text-base leading-7 text-white/68 sm:text-lg sm:leading-8">
@@ -165,18 +165,19 @@ export default function Home() {
             </p>
           </div>
 
-          <aside className="rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-6 lg:justify-self-end lg:p-7">
-            <p className="font-detail text-xs font-semibold uppercase tracking-[0.18em] text-steel">
+          <aside className="rounded-[1.5rem] border border-mist bg-slate p-6 lg:justify-self-end lg:p-7">
+            <p className="font-detail text-xs font-semibold uppercase tracking-[0.18em] text-mist">
               Proyecto final
             </p>
-            <p className="mt-3 max-w-xs text-sm leading-6 text-white/65">
+            <p className="mt-3 max-w-xs text-sm leading-6 text-white">
               Aplicación web de comercio electrónico con flujos reactivos para compra,
               publicación y trueque.
             </p>
-            <div className="mt-7 flex flex-wrap gap-2 text-xs font-medium text-white/75">
-              <span className="rounded-full border border-white/15 px-3 py-1.5">React</span>
-              <span className="rounded-full border border-white/15 px-3 py-1.5">SPA</span>
-              <span className="rounded-full border border-white/15 px-3 py-1.5">
+            <div className="mt-7 flex flex-wrap gap-2 text-xs font-medium text-white">
+              <span className="rounded-full border border-steel bg-navy px-3 py-1.5">React</span>
+              <span className="rounded-full border border-steel bg-navy px-3 py-1.5">SPA</span>
+              <span className="rounded-full border border-steel bg-navy px-3 py-1.5">Supabase</span>
+              <span className="rounded-full border border-steel bg-navy px-3 py-1.5">
                 Diseño responsivo
               </span>
             </div>
@@ -199,8 +200,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="max-w-md text-sm leading-6 text-ink/65 md:text-right">
-              Los recursos aparecen en el orden de revisión solicitado. Los que aún no tienen
-              enlace quedan identificados sin generar redirecciones vacías.
+              Los recursos que aún no tienen enlace están marcados
             </p>
           </div>
 
@@ -215,7 +215,7 @@ export default function Home() {
       <footer className="border-t border-steel/25 bg-canvas px-5 py-8 sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-ink/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            <span className="font-semibold text-navy">El Palacio</span> · Presentación de proyecto SPA
+            <span className="font-semibold text-navy">Landing El Palacio</span> · Presentación de proyecto SPA
           </p>
           <a
             className="inline-flex items-center gap-2 font-detail font-semibold text-slate outline-none hover:text-navy focus-visible:ring-2 focus-visible:ring-slate"

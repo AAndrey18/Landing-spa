@@ -14,11 +14,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const imageUrl = `${protocol}://${host}/og.png`;
 
   return {
-    title: "El Palacio | Presentación del proyecto SPA",
+    title: "Landing El Palacio",
     description:
       "Landing de entrega académica con los videos, documentación y accesos del proyecto SPA El Palacio.",
     openGraph: {
-      title: "El Palacio | Presentación del proyecto SPA",
+      title: "Landing El Palacio",
       description:
         "Todos los entregables, evidencias y accesos del proyecto El Palacio en un solo lugar.",
       type: "website",
@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: "El Palacio | Presentación del proyecto SPA",
+      title: "Landing El Palacio",
       description: "Una entrega. Todo el proyecto.",
       images: [imageUrl],
     },
