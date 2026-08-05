@@ -18,7 +18,6 @@ type Resource = {
   action: string;
   href: string;
   icon: LucideIcon;
-  fileName?: string;
 };
 
 const resources: Resource[] = [
@@ -54,10 +53,9 @@ const resources: Resource[] = [
     title: "Documento SRS",
     description:
       "Especificación de requisitos, alcance, historias de usuario y evidencia de pruebas del proyecto.",
-    action: "Descargar documento SRS",
+    action: "Abrir documento SRS",
     href: projectLinks.srsDocument,
     icon: FileText,
-    fileName: "ERS-actualizacion-semana-5.pdf",
   },
   {
     number: "05",
@@ -115,7 +113,6 @@ function ResourceCard({ resource }: { resource: Resource }) {
         <a
           aria-label={`${resource.action} (abre en una pestaña nueva)`}
           className="resource-link mt-7 inline-flex min-h-11 items-center justify-between gap-3 border-t border-slate/15 pt-5 font-detail text-sm font-semibold text-navy outline-none"
-          download={resource.fileName}
           href={resource.href}
           rel="noreferrer"
           target="_blank"

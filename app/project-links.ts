@@ -7,7 +7,8 @@ export const projectLinks = {
   portfolio: "https://portafolio-seven-phi-38.vercel.app/",
   tutorialVideo: "",
 
-  srsDocument: "/documentos/ERS-actualizacion-semana-5.pdf",
+  srsDocument:
+    "https://redunid.sharepoint.com/:u:/r/sites/ERSElPalacio/SitePages/CollabHome.aspx?d=wde23d74f6d5f45a6b8e31e45a14d777c&csf=1&web=2&share=IQBP1yPeX22mRbjjHkWhTXd8ASg0VqlJm3zC68W8MdqAIhY&e=oUd4Gs",
 
   testimonialVideo: "",
   finalSpa: "https://el-palacio-2da-version.vercel.app/",

@@ -54,9 +54,10 @@ test("leaves missing links disabled and keeps available resources valid", async 
 
   assert.match(page, /const available = Boolean\(resource\.href\)/);
   assert.match(page, /aria-disabled="true"/);
+  assert.match(page, /Abrir documento SRS/);
   assert.match(
     links,
-    /srsDocument: "\/documentos\/ERS-actualizacion-semana-5\.pdf"/,
+    /https:\/\/redunid\.sharepoint\.com\/:u:\/r\/sites\/ERSElPalacio\/SitePages\/CollabHome\.aspx/,
   );
   assert.match(
     links,
