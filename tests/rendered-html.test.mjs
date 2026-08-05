@@ -57,6 +57,10 @@ test("leaves missing links disabled and keeps available resources valid", async 
   assert.match(page, /Abrir documento SRS/);
   assert.match(
     links,
+    /promotionalVideo: "https:\/\/vt\.tiktok\.com\/ZS4HcgWN1\/"/,
+  );
+  assert.match(
+    links,
     /https:\/\/redunid\.sharepoint\.com\/:u:\/r\/sites\/ERSElPalacio\/SitePages\/CollabHome\.aspx/,
   );
   assert.match(
@@ -67,5 +71,5 @@ test("leaves missing links disabled and keeps available resources valid", async 
     links,
     /finalSpa: "https:\/\/el-palacio-2da-version\.vercel\.app\/"/,
   );
-  assert.equal((links.match(/: "",/g) ?? []).length, 3);
+  assert.equal((links.match(/: "",/g) ?? []).length, 2);
 });

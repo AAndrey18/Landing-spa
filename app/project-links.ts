@@ -3,7 +3,7 @@
  * y muestra el recurso como "Pendiente de integrar" sin crear enlaces rotos.
  */
 export const projectLinks = {
-  promotionalVideo: "",
+  promotionalVideo: "https://vt.tiktok.com/ZS4HcgWN1/",
   portfolio: "https://portafolio-seven-phi-38.vercel.app/",
   tutorialVideo: "",
 
