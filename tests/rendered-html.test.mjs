@@ -27,7 +27,7 @@ test("keeps the six resources in the requested order", async () => {
     "Portafolio en Vercel",
     "Video tutorial de la SPA",
     "Documento SRS",
-    "Video testimonial",
+    "Video reflexivo",
     "SPA final: El Palacio",
   ];
 
@@ -61,6 +61,14 @@ test("leaves missing links disabled and keeps available resources valid", async 
   );
   assert.match(
     links,
+    /drive\.google\.com\/file\/d\/1sjusjlGmW_NqJkAeyD_O5-VARTHOoo5Z\/view\?usp=sharing/,
+  );
+  assert.match(
+    links,
+    /drive\.google\.com\/file\/d\/1IpKwFWdP50hTDKT_Zy8x2E3c8LHItSfs\/view\?usp=sharing/,
+  );
+  assert.match(
+    links,
     /https:\/\/redunid\.sharepoint\.com\/:u:\/r\/sites\/ERSElPalacio\/SitePages\/CollabHome\.aspx/,
   );
   assert.match(
@@ -71,5 +79,5 @@ test("leaves missing links disabled and keeps available resources valid", async 
     links,
     /finalSpa: "https:\/\/el-palacio-2da-version\.vercel\.app\/"/,
   );
-  assert.equal((links.match(/: "",/g) ?? []).length, 2);
+  assert.equal((links.match(/: "",/g) ?? []).length, 0);
 });
