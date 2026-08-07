@@ -27,7 +27,7 @@ test("keeps the six resources in the requested order", async () => {
     "Portafolio en Vercel",
     "Video tutorial de la SPA",
     "Documento SRS",
-    "Video reflexivo",
+    "Video testimonial",
     "SPA final: El Palacio",
   ];
 

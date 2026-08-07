@@ -59,10 +59,10 @@ const resources: Resource[] = [
   },
   {
     number: "05",
-    title: "Video reflexivo",
+    title: "Video testimonial",
     description:
-      "Reflexión sobre la experiencia, los aprendizajes y los resultados obtenidos durante el desarrollo de la SPA.",
-    action: "Ver video reflexivo",
+      "Testimonio sobre la experiencia, el valor del producto y los resultados obtenidos con la SPA.",
+    action: "Ver video testimonial",
     href: projectLinks.testimonialVideo,
     icon: MessageSquareQuote,
   },
